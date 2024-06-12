@@ -15,6 +15,7 @@ import Settings from './pages/Settings';
 import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
 import Buttons from './pages/UiElements/Buttons';
+import Signin from './components/signin/Signin';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -33,11 +34,29 @@ function App() {
   ) : (
     <>
       <Routes>
+        {/* <Route
+          index
+          element={
+            <>
+              <PageTitle title="Responsive Ip Switch" />
+              <ECommerce />
+            </>
+          }
+        /> */}
         <Route
           index
           element={
             <>
               <PageTitle title="Responsive Ip Switch" />
+              <Signin />
+            </>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <>
+              <PageTitle title="Dashboard" />
               <ECommerce />
             </>
           }
